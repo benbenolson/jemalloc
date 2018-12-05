@@ -21,11 +21,11 @@ typedef int malloc_cpuid_t;
  *
  * aaaaaaaa aaaatttt tttttttt 0znnnnnn
  */
-#define MALLOCX_ARENA_BITS	12
+#define MALLOCX_ARENA_BITS	18
 #define MALLOCX_TCACHE_BITS	12
-#define MALLOCX_LG_ALIGN_BITS	6
-#define MALLOCX_ARENA_SHIFT	20
-#define MALLOCX_TCACHE_SHIFT	8
+#define MALLOCX_LG_ALIGN_BITS	0
+#define MALLOCX_ARENA_SHIFT	14
+#define MALLOCX_TCACHE_SHIFT	2
 #define MALLOCX_ARENA_MASK \
     (((1 << MALLOCX_ARENA_BITS) - 1) << MALLOCX_ARENA_SHIFT)
 /* NB: Arena index bias decreases the maximum number of arenas by 1. */
